@@ -74,3 +74,15 @@ if __name__ == '__main__':
     for student in seconds:
         print(student)
 ```
+
+## Solution 2
+```
+if __name__ == '__main__':
+    dict = {}
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dict.setdefault(score, []).append(name)
+    scores = sorted(dict.items())
+    print(*(name for name in sorted(scores.pop(1)[1])), sep='\n')
+```
