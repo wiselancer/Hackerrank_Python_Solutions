@@ -106,3 +106,14 @@ arr = list(arr)
 new_arr = remove_n(arr, max(arr))
 print(max(new_arr))
 ```
+
+
+
+##Solution 5
+```
+import heapq
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    print(heapq.nlargest(2, set(arr))[1])
+```
